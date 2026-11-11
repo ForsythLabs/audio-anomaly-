@@ -1,0 +1,2092 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "output",
+      "x": 420.0000142038223,
+      "y": -523.9999977113443,
+      "title": "Master Output",
+      "color": "bg-indigo-600",
+      "inputs": {
+        "input": {
+          "name": "Input",
+          "connection": {
+            "fromNodeId": 7,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {},
+      "width": 180,
+      "height": 65,
+      "notes": "",
+      "isDirty": false
+    },
+    {
+      "id": 1,
+      "type": "oscillator",
+      "x": -573.9094769811214,
+      "y": 29.513659349206023,
+      "title": "Sine Wave",
+      "color": "bg-blue-500",
+      "inputs": {
+        "harmonic": {
+          "name": "Harmonic",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "phase": {
+          "name": "Phase",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "mod": {
+          "name": "Modulation",
+          "connection": {
+            "fromNodeId": 16,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "mod"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "type": "sine",
+        "harmonic": 6
+      }
+    },
+    {
+      "id": 2,
+      "type": "oscillator",
+      "x": 114.0905228773122,
+      "y": 391.51366262882607,
+      "title": "Sine Wave",
+      "color": "bg-blue-500",
+      "inputs": {
+        "harmonic": {
+          "name": "Harmonic",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "phase": {
+          "name": "Phase",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "mod": {
+          "name": "Modulation",
+          "connection": {
+            "fromNodeId": 8,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "mod"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "type": "sine",
+        "harmonic": 0.119,
+        "phase": 22
+      }
+    },
+    {
+      "id": 3,
+      "type": "oscillator",
+      "x": 400.09052771416214,
+      "y": 389.5136657432855,
+      "title": "Sine Wave",
+      "color": "bg-blue-500",
+      "inputs": {
+        "harmonic": {
+          "name": "Harmonic",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "phase": {
+          "name": "Phase",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "mod": {
+          "name": "Modulation",
+          "connection": null,
+          "accepts": [
+            "mod"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "type": "sine",
+        "harmonic": 0.0238,
+        "phase": 30
+      }
+    },
+    {
+      "id": 4,
+      "type": "multiply",
+      "x": 196.0905282804274,
+      "y": 114.51365937280042,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 22,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": {
+            "fromNodeId": 2,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": false
+    },
+    {
+      "id": 6,
+      "type": "multiply",
+      "x": 560.0905334004099,
+      "y": 184.51366262882613,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 36,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": {
+            "fromNodeId": 3,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": false
+    },
+    {
+      "id": 7,
+      "type": "multiply",
+      "x": 827.0905390630633,
+      "y": 187.51366265242052,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 6,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": null,
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "inputB": 0.5
+      }
+    },
+    {
+      "id": 8,
+      "type": "mod",
+      "x": -159.9094791753996,
+      "y": 439.5136621805327,
+      "title": "FM Modulation",
+      "color": "bg-teal-500",
+      "inputs": {
+        "rate": {
+          "name": "Rate",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "depth": {
+          "name": "Depth",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 20
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "mod"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "rate": 1,
+        "depth": 0.01
+      }
+    },
+    {
+      "id": 12,
+      "type": "noise",
+      "x": -1328.0694769811216,
+      "y": 333.09365934920595,
+      "title": "Noise",
+      "color": "bg-pink-500",
+      "inputs": {
+        "amp": {
+          "name": "Amp",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 65,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "type": "pink"
+      }
+    },
+    {
+      "id": 13,
+      "type": "svf",
+      "x": -996.0694769811216,
+      "y": 336.09365934920595,
+      "title": "State Variable Filter",
+      "color": "bg-cyan-500",
+      "inputs": {
+        "input": {
+          "name": "Input",
+          "connection": {
+            "fromNodeId": 12,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "cutoff": {
+          "name": "Cutoff",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 4
+        },
+        "resonance": {
+          "name": "Resonance",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.7
+        }
+      },
+      "outputs": {
+        "lowpass": {
+          "name": "LP",
+          "type": "wave"
+        },
+        "highpass": {
+          "name": "HP",
+          "type": "wave"
+        },
+        "bandpass": {
+          "name": "BP",
+          "type": "wave"
+        },
+        "notch": {
+          "name": "Notch",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 140,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "resonance": 2,
+        "cutoff": 0.1
+      }
+    },
+    {
+      "id": 14,
+      "type": "oscillator",
+      "x": -1993.3194769811216,
+      "y": -102.76634065079406,
+      "title": "Sine Wave",
+      "color": "bg-blue-500",
+      "inputs": {
+        "harmonic": {
+          "name": "Harmonic",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "phase": {
+          "name": "Phase",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "mod": {
+          "name": "Modulation",
+          "connection": {
+            "fromNodeId": 38,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "mod"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "type": "sine",
+        "harmonic": 0.01
+      }
+    },
+    {
+      "id": 15,
+      "type": "multiply",
+      "x": -514.0394769811217,
+      "y": 388.183659349206,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 13,
+            "fromPinKey": "bandpass"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": null,
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "inputB": 0.1
+      }
+    },
+    {
+      "id": 16,
+      "type": "mod",
+      "x": -888.8894769811216,
+      "y": 78.89365934920596,
+      "title": "FM Modulation",
+      "color": "bg-teal-500",
+      "inputs": {
+        "rate": {
+          "name": "Rate",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "depth": {
+          "name": "Depth",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 20
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "mod"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "rate": 0.5,
+        "depth": 2
+      }
+    },
+    {
+      "id": 17,
+      "type": "oscillator",
+      "x": -887.4494769811217,
+      "y": -515.7663406507941,
+      "title": "Sine Wave",
+      "color": "bg-blue-500",
+      "inputs": {
+        "harmonic": {
+          "name": "Harmonic",
+          "connection": {
+            "fromNodeId": 31,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "phase": {
+          "name": "Phase",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "mod": {
+          "name": "Modulation",
+          "connection": null,
+          "accepts": [
+            "mod"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "type": "sine",
+        "harmonic": 0.5
+      }
+    },
+    {
+      "id": 19,
+      "type": "adsr",
+      "x": -877.6494769811216,
+      "y": -325.2263406507941,
+      "title": "ADSR Envelope",
+      "color": "bg-fuchsia-500",
+      "inputs": {
+        "attack": {
+          "name": "Attack",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.01
+        },
+        "decay": {
+          "name": "Decay",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.1
+        },
+        "sustain": {
+          "name": "Sustain",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        },
+        "release": {
+          "name": "Release",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        },
+        "attackCurve": {
+          "name": "A. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "decayCurve": {
+          "name": "D. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "releaseCurve": {
+          "name": "R. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "retriggerTime": {
+          "name": "Retrigger",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Envelope",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 240,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "attack": 0.1,
+        "decay": 0.06,
+        "sustain": 0.5,
+        "release": 0.1,
+        "attackCurve": 0.6,
+        "decayCurve": 0.2,
+        "releaseCurve": 0.7,
+        "retriggerTime": 0.35
+      }
+    },
+    {
+      "id": 20,
+      "type": "multiply",
+      "x": -602.9459551379564,
+      "y": -462.1007536007288,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 17,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": {
+            "fromNodeId": 19,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true
+    },
+    {
+      "id": 21,
+      "type": "multiply",
+      "x": -1411.9459551379564,
+      "y": -404.1007536007286,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 32,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": {
+            "fromNodeId": 39,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true
+    },
+    {
+      "id": 22,
+      "type": "multiply",
+      "x": 225.05404486204338,
+      "y": -29.100753600728694,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": null,
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": null,
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true
+    },
+    {
+      "id": 23,
+      "type": "shaper",
+      "x": -830.2371443588659,
+      "y": 519.1462453431611,
+      "title": "Wave Shaper",
+      "color": "bg-red-500",
+      "inputs": {
+        "input": {
+          "name": "Input",
+          "connection": null,
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "amount": {
+          "name": "Amount",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "bias": {
+          "name": "Bias",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "outputGain": {
+          "name": "Gain",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 140,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "amount": 0.25,
+        "outputGain": 0.25
+      }
+    },
+    {
+      "id": 24,
+      "type": "ladder",
+      "x": -532.719124278864,
+      "y": 688.8010084931611,
+      "title": "Ladder Filter",
+      "color": "bg-amber-500",
+      "inputs": {
+        "input": {
+          "name": "Input",
+          "connection": null,
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "cutoff": {
+          "name": "Cutoff",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 4
+        },
+        "resonance": {
+          "name": "Resonance",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "resonance": 1.5,
+        "cutoff": 0.5
+      }
+    },
+    {
+      "id": 25,
+      "type": "ladder",
+      "x": -538.9400842788643,
+      "y": 550.0142484931614,
+      "title": "Ladder Filter",
+      "color": "bg-amber-500",
+      "inputs": {
+        "input": {
+          "name": "Input",
+          "connection": null,
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "cutoff": {
+          "name": "Cutoff",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 4
+        },
+        "resonance": {
+          "name": "Resonance",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "cutoff": 4
+      }
+    },
+    {
+      "id": 26,
+      "type": "adsr",
+      "x": -334.70281707886534,
+      "y": -274.56667820683765,
+      "title": "ADSR Envelope",
+      "color": "bg-fuchsia-500",
+      "inputs": {
+        "attack": {
+          "name": "Attack",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.01
+        },
+        "decay": {
+          "name": "Decay",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.1
+        },
+        "sustain": {
+          "name": "Sustain",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        },
+        "release": {
+          "name": "Release",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        },
+        "attackCurve": {
+          "name": "A. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "decayCurve": {
+          "name": "D. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "releaseCurve": {
+          "name": "R. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "retriggerTime": {
+          "name": "Retrigger",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Envelope",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 240,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "attack": 1,
+        "decay": 0.3,
+        "sustain": 0.5,
+        "release": 0.5,
+        "attackCurve": 0.6,
+        "decayCurve": 0.7,
+        "releaseCurve": 0.6,
+        "retriggerTime": 2
+      }
+    },
+    {
+      "id": 27,
+      "type": "multiply",
+      "x": -135.60811707886864,
+      "y": -465.93824820683824,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 20,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": {
+            "fromNodeId": 26,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true
+    },
+    {
+      "id": 28,
+      "type": "oscillator",
+      "x": -562.7458170788634,
+      "y": 183.70975179316048,
+      "title": "Sine Wave",
+      "color": "bg-blue-500",
+      "inputs": {
+        "harmonic": {
+          "name": "Harmonic",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "phase": {
+          "name": "Phase",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "mod": {
+          "name": "Modulation",
+          "connection": null,
+          "accepts": [
+            "mod"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "type": "sine",
+        "harmonic": 0.118,
+        "phase": 0
+      }
+    },
+    {
+      "id": 29,
+      "type": "mod",
+      "x": -895.7458170788645,
+      "y": 193.70975179316036,
+      "title": "FM Modulation",
+      "color": "bg-teal-500",
+      "inputs": {
+        "rate": {
+          "name": "Rate",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "depth": {
+          "name": "Depth",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 20
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "mod"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "rate": 0.25,
+        "depth": 0.05
+      }
+    },
+    {
+      "id": 30,
+      "type": "float",
+      "x": -1458.8022921059119,
+      "y": -578.0073877665657,
+      "title": "Float",
+      "color": "bg-gray-500",
+      "inputs": {},
+      "outputs": {
+        "output": {
+          "name": "Value",
+          "type": "number"
+        }
+      },
+      "width": 180,
+      "height": 65,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "value": 0.75
+      }
+    },
+    {
+      "id": 31,
+      "type": "add",
+      "x": -1192.217769190809,
+      "y": -521.2876281873018,
+      "title": "Add",
+      "color": "bg-green-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 30,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": {
+            "fromNodeId": 21,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true
+    },
+    {
+      "id": 32,
+      "type": "mod",
+      "x": -1668.0254326017766,
+      "y": -403.5468317936128,
+      "title": "FM Modulation",
+      "color": "bg-teal-500",
+      "inputs": {
+        "rate": {
+          "name": "Rate",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "depth": {
+          "name": "Depth",
+          "connection": {
+            "fromNodeId": 34,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 20
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "mod"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "rate": 0.5,
+        "depth": 0.1
+      }
+    },
+    {
+      "id": 33,
+      "type": "oscillator",
+      "x": -2243.0254326017766,
+      "y": -380.5468317936128,
+      "title": "Sine Wave",
+      "color": "bg-blue-500",
+      "inputs": {
+        "harmonic": {
+          "name": "Harmonic",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "phase": {
+          "name": "Phase",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "mod": {
+          "name": "Modulation",
+          "connection": null,
+          "accepts": [
+            "mod"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "type": "sine",
+        "harmonic": 0.005
+      }
+    },
+    {
+      "id": 34,
+      "type": "multiply",
+      "x": -1950.0254326017766,
+      "y": -380.5468317936128,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 33,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": null,
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "inputB": 0.2
+      }
+    },
+    {
+      "id": 35,
+      "type": "multiply",
+      "x": -310.74889518630266,
+      "y": 182.40257114402425,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 28,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": null,
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "inputB": 0.1
+      }
+    },
+    {
+      "id": 36,
+      "type": "add",
+      "x": -68.74889518630266,
+      "y": 253.40257114402425,
+      "title": "Add",
+      "color": "bg-green-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 35,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": {
+            "fromNodeId": 15,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": false
+    },
+    {
+      "id": 37,
+      "type": "add",
+      "x": -8.248149731758076,
+      "y": -37.425792492336996,
+      "title": "Add",
+      "color": "bg-green-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": null,
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": null,
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true
+    },
+    {
+      "id": 38,
+      "type": "mod",
+      "x": -2244.969149731758,
+      "y": -53.83197431051826,
+      "title": "FM Modulation",
+      "color": "bg-teal-500",
+      "inputs": {
+        "rate": {
+          "name": "Rate",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "depth": {
+          "name": "Depth",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 20
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "mod"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "rate": 0.5,
+        "depth": 0.05
+      }
+    },
+    {
+      "id": 39,
+      "type": "adsr",
+      "x": -1681.1864029419653,
+      "y": -183.99275939817392,
+      "title": "ADSR Envelope",
+      "color": "bg-fuchsia-500",
+      "inputs": {
+        "attack": {
+          "name": "Attack",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.01
+        },
+        "decay": {
+          "name": "Decay",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.1
+        },
+        "sustain": {
+          "name": "Sustain",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        },
+        "release": {
+          "name": "Release",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        },
+        "attackCurve": {
+          "name": "A. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "decayCurve": {
+          "name": "D. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "releaseCurve": {
+          "name": "R. Curve",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "retriggerTime": {
+          "name": "Retrigger",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Envelope",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 240,
+      "notes": "",
+      "isDirty": false,
+      "params": {
+        "attack": 0.1,
+        "decay": 0.1,
+        "sustain": 0.5,
+        "release": 0.1,
+        "attackCurve": 0.6,
+        "decayCurve": 0.5,
+        "releaseCurve": 0.7,
+        "retriggerTime": 0.35
+      }
+    },
+    {
+      "id": 40,
+      "type": "multiply",
+      "x": 105.70200862744696,
+      "y": -532.6457433295786,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 42,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": {
+            "fromNodeId": 27,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true
+    },
+    {
+      "id": 41,
+      "type": "oscillator",
+      "x": -490.29799137255304,
+      "y": -775.6457433295786,
+      "title": "Sine Wave",
+      "color": "bg-blue-500",
+      "inputs": {
+        "harmonic": {
+          "name": "Harmonic",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 1
+        },
+        "phase": {
+          "name": "Phase",
+          "connection": null,
+          "accepts": [
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0
+        },
+        "mod": {
+          "name": "Modulation",
+          "connection": null,
+          "accepts": [
+            "mod"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 115,
+      "notes": "",
+      "isDirty": true,
+      "params": {
+        "type": "sine",
+        "harmonic": 0.0005
+      }
+    },
+    {
+      "id": 42,
+      "type": "multiply",
+      "x": -222.29799137255304,
+      "y": -734.6457433295786,
+      "title": "Multiply",
+      "color": "bg-purple-500",
+      "inputs": {
+        "inputA": {
+          "name": "A",
+          "connection": {
+            "fromNodeId": 41,
+            "fromPinKey": "output"
+          },
+          "accepts": [
+            "wave"
+          ],
+          "isParam": false,
+          "defaultValue": 0
+        },
+        "inputB": {
+          "name": "B",
+          "connection": null,
+          "accepts": [
+            "wave",
+            "number"
+          ],
+          "isParam": true,
+          "defaultValue": 0.5
+        }
+      },
+      "outputs": {
+        "output": {
+          "name": "Output",
+          "type": "wave"
+        }
+      },
+      "width": 180,
+      "height": 90,
+      "notes": "",
+      "isDirty": true
+    }
+  ],
+  "connections": [
+    {
+      "fromNodeId": 2,
+      "fromPinKey": "output",
+      "toNodeId": 4,
+      "toPinKey": "inputB"
+    },
+    {
+      "fromNodeId": 3,
+      "fromPinKey": "output",
+      "toNodeId": 6,
+      "toPinKey": "inputB"
+    },
+    {
+      "fromNodeId": 6,
+      "fromPinKey": "output",
+      "toNodeId": 7,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 8,
+      "fromPinKey": "output",
+      "toNodeId": 2,
+      "toPinKey": "mod"
+    },
+    {
+      "fromNodeId": 17,
+      "fromPinKey": "output",
+      "toNodeId": 20,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 19,
+      "fromPinKey": "output",
+      "toNodeId": 20,
+      "toPinKey": "inputB"
+    },
+    {
+      "fromNodeId": 22,
+      "fromPinKey": "output",
+      "toNodeId": 4,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 16,
+      "fromPinKey": "output",
+      "toNodeId": 1,
+      "toPinKey": "mod"
+    },
+    {
+      "fromNodeId": 12,
+      "fromPinKey": "output",
+      "toNodeId": 13,
+      "toPinKey": "input"
+    },
+    {
+      "fromNodeId": 26,
+      "fromPinKey": "output",
+      "toNodeId": 27,
+      "toPinKey": "inputB"
+    },
+    {
+      "fromNodeId": 30,
+      "fromPinKey": "output",
+      "toNodeId": 31,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 33,
+      "fromPinKey": "output",
+      "toNodeId": 34,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 34,
+      "fromPinKey": "output",
+      "toNodeId": 32,
+      "toPinKey": "depth"
+    },
+    {
+      "fromNodeId": 31,
+      "fromPinKey": "output",
+      "toNodeId": 17,
+      "toPinKey": "harmonic"
+    },
+    {
+      "fromNodeId": 13,
+      "fromPinKey": "bandpass",
+      "toNodeId": 15,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 35,
+      "fromPinKey": "output",
+      "toNodeId": 36,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 15,
+      "fromPinKey": "output",
+      "toNodeId": 36,
+      "toPinKey": "inputB"
+    },
+    {
+      "fromNodeId": 28,
+      "fromPinKey": "output",
+      "toNodeId": 35,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 38,
+      "fromPinKey": "output",
+      "toNodeId": 14,
+      "toPinKey": "mod"
+    },
+    {
+      "fromNodeId": 20,
+      "fromPinKey": "output",
+      "toNodeId": 27,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 32,
+      "fromPinKey": "output",
+      "toNodeId": 21,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 39,
+      "fromPinKey": "output",
+      "toNodeId": 21,
+      "toPinKey": "inputB"
+    },
+    {
+      "fromNodeId": 21,
+      "fromPinKey": "output",
+      "toNodeId": 31,
+      "toPinKey": "inputB"
+    },
+    {
+      "fromNodeId": 27,
+      "fromPinKey": "output",
+      "toNodeId": 40,
+      "toPinKey": "inputB"
+    },
+    {
+      "fromNodeId": 41,
+      "fromPinKey": "output",
+      "toNodeId": 42,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 42,
+      "fromPinKey": "output",
+      "toNodeId": 40,
+      "toPinKey": "inputA"
+    },
+    {
+      "fromNodeId": 7,
+      "fromPinKey": "output",
+      "toNodeId": 0,
+      "toPinKey": "input"
+    },
+    {
+      "fromNodeId": 36,
+      "fromPinKey": "output",
+      "toNodeId": 6,
+      "toPinKey": "inputA"
+    }
+  ],
+  "variables": {},
+  "panOffset": {
+    "x": 394.82999703231405,
+    "y": 342.8564533366821
+  },
+  "zoom": 0.5644739300537829,
+  "nextId": 43,
+  "nextVariableId": 0
+}

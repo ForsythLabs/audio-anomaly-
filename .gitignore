@@ -1,0 +1,17 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local dependencies and generated output
+node_modules/
+dist/
+coverage/
+*.log
+
+# Local hosting state and credentials
+.netlify/
+.env
+.env.*
+!.env.example
